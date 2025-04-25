@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    padding: 10px 40px;
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #F5F5F6;
+}
+
+.menu-items{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.burger-menu{
+    display: none;
+}
+img {
+    height: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+.first {
+    color: black;
+    padding: 10px;
+    background-color: white;
+}
+
+p {
+    color: #959BA4;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+.second {
+    color: black;
+}
+
+.wrapper1 button {
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    color: #C6C6C6;
+    width: 70px;
+    padding: 5px;
+    margin-right: -6px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-info1,
+.input-info2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #959BA4;
+}
+
+.input-container input {
+    font-size: 50px;
+    margin-top: 20px;
+    width: 275px;
+    height: 150px;
+    padding-bottom: 70px;
+}
+
+.wrapper {
+    height: 49vh;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.wrapper2 button {
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    color: #C6C6C6;
+    width: 70px;
+    padding: 5px;
+    margin-right: -6px;
+}
+
+
+.wrapper1 {
+    margin-left: 340px;
+}
+
+.wrapper2 {
+    margin-left: 90px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 50px 0 0 340px;
+}
+
+button.active {
+    background-color: #833AE0;
+    color: white;
+}
+
+#network-warning {
+    display: none;
+    color: red;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: -350px;
+}
+
+@media screen and (min-width: 350px) and (max-width: 600px) {
+    .container {
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .input-container {
+        position: relative;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .input-container input {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .input-info1,
+    .input-info2 {
+        position: absolute;
+        bottom: 12px;
+        left: 15px;
+        pointer-events: none;
+        font-size: 11px;
+    }
+
+
+    .burger-menu {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 18px;
+        z-index: 10;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 43.7px;
+        left: 0;
+        width: 100%;
+
+        background-color: #F5F5F6;
+        z-index: 10;
+    }
+
+    .container.show-menu .menu-items {
+        display: flex;
+    }
+
+    .menu-items p {
+        padding: 10px;
+        color: black;
+        font-size: 16px;
+        background-color: #F5F5F6;
+        width: 100%;
+    }
+
+
+    .container p:not(.first):not(.second) {
+        display: block;
+    }
+
+    .container.show-menu p {
+        display: block;
+    }
+
+    .container.show-menu {
+        flex-wrap: wrap;
+    }
+
+    img {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .first {
+        position: absolute;
+        right: 20px;
+        background-color: white;
+        color: black;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .wrapper1,
+    .wrapper2 {
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .wrapper1 button,
+    .wrapper2 button {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+        margin: 30px 0;
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .burger-menu {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top: 18px;
+        z-index: 10;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        gap: 2px;
+        position: absolute;
+        top: 43.7px;
+        left: 0;
+        width: 100%;
+
+        background-color: #F5F5F6;
+        z-index: 10;
+    }
+
+    .container.show-menu .menu-items {
+        display: flex;
+    }
+
+    .menu-items p {
+        padding: 10px;
+        color: black;
+        font-size: 16px;
+        background-color: #F5F5F6;
+        width: 100%;
+    }
+
+    .input-container {
+        position: relative;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .input-container input {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .input-info1,
+    .input-info2 {
+        position: absolute;
+        bottom: 12px;
+        left: 15px;
+        pointer-events: none;
+        font-size: 11px;
+    }
+
+    .container p:not(.first):not(.second) {
+        display: block;
+    }
+
+    .container.show-menu p {
+        display: block;
+    }
+
+    .container.show-menu {
+        flex-wrap: wrap;
+    }
+
+    .container {
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        padding: 10px 40px;
+    }
+
+    img {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .first {
+        position: absolute;
+        right: 40px;
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .wrapper1,
+    .wrapper2 {
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .wrapper1 button,
+    .wrapper2 button {
+        width: 72px;
+        font-size: 16px;
+    }
+
+    .input-container input {
+        height: 130px;
+        font-size: 42px;
+    }
+
+    h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 80px 0 40px 0;
+    }
+}
