@@ -48,7 +48,7 @@ function convertCurrency() {
         return;
     }
 
-    fetch(`https://v6.exchangerate-api.com/v6/ea56ee079232b55d83f4035c/latest/${fromCurrency}`)
+    fetch(` https://v6.exchangerate-api.com/v6/1cdbb831c18f7dc6d593a2fc/latest/${fromCurrency}`)
         .then(res => res.json())
         .then(data => {
             let rate = data.conversion_rates[toCurrency];
@@ -78,7 +78,7 @@ function convertCurrency1() {
         return;
     }
 
-    fetch(`https://v6.exchangerate-api.com/v6/ea56ee079232b55d83f4035c/latest/${toCurrency}`)
+    fetch(` https://v6.exchangerate-api.com/v6/1cdbb831c18f7dc6d593a2fc/latest/${toCurrency}`)
         .then(res => res.json())
         .then(data => {
             let rate = data.conversion_rates[fromCurrency];

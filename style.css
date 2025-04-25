@@ -144,7 +144,9 @@ button.active {
         width: 100%;
         padding-bottom: 40px;
     }
-
+#network-warning{
+    margin-left: 0;
+}
     .input-info1,
     .input-info2 {
         position: absolute;
@@ -255,7 +257,9 @@ button.active {
         top: 18px;
         z-index: 10;
     }
-
+    #network-warning{
+        margin-left: 0;
+    }
     .menu-items {
         display: none;
         flex-direction: column;
